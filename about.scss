@@ -1,0 +1,379 @@
+$primaryColor: #DA3082;
+$seconderyColor:White;
+$mainColor:#10050B;
+
+/*font*/
+@font-face {
+  font-family: primaryFont;
+  src: url(Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: primaryBold;
+  src: url(Poppins-Bold.ttf);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background-color: $mainColor;
+  font-family: primaryFont;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 72px auto 100px;
+  color: $seconderyColor;
+}
+
+/*===================Nav Bar===================*/
+nav {
+  grid-column: span 12;
+  grid-row: 1;
+}
+.navbar {
+  background-color: $mainColor !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.nav-link {
+  color: $seconderyColor !important; 
+  margin: 0 10px;
+}
+
+/*active nav item*/ 
+.nav-link.active {
+  font-weight: bold;
+  color: $primaryColor !important; 
+}
+
+/*underline effect for active nav item*/
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: $primaryColor;
+  box-shadow: 0px 0px 10px 1px $primaryColor;
+}
+
+.nav-link:hover {
+    color: $primaryColor !important;
+}
+  
+nav img {
+    width: 40px;
+    height: 40px;
+}
+
+nav p {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.container-fluid {
+  margin-left: 75px;
+  margin-right: 110px;
+}
+
+
+/*===================Main section===================*/
+section {
+  grid-column: span 12;
+  grid-row: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 100px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 2.5s ease-out forwards;
+}
+
+section .left {
+    width: 580px;
+    height: 530px;
+}
+
+.left .txt div {
+    font-size: 50px;
+    color: $primaryColor;
+    font-weight: bold;
+}
+
+.left .txt p {
+    font-size: 18px;
+    color: $seconderyColor;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.left p{
+    color: $primaryColor;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.left .soft-skills {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left .soft-skills div {
+    background-color: $mainColor;
+    width: 160px;
+    height: 52px;
+    color: $seconderyColor;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 14px;
+    transition: transform() 2s;
+    box-shadow: 0px 0px 10px $seconderyColor;
+}
+
+.left .soft-skills div:hover {
+    transform: scale(1.1,1.1);
+    border: 4px solid $primaryColor;
+    box-shadow: 0px 0px 10px $seconderyColor;
+}
+
+.right >p{
+    color: $primaryColor;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.right .tech-skills{
+    display: flex;
+    flex-direction: column;
+    height: 470px;
+    width: 510px;
+    justify-content: space-between;
+}
+
+.right .tech-skills div {
+    background-color: #7a7a7a36;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    align-items: start;
+}
+
+
+/*slider*/
+.right div:nth-of-type(1) .rate{--bar-width:380px}
+.right div:nth-of-type(2) .rate{--bar-width:235px}
+.right div:nth-of-type(3) .rate{--bar-width:325px}
+.right div:nth-of-type(4) .rate{--bar-width:180px}
+.right div:nth-of-type(5) .rate{--bar-width:260px}
+
+.rate {
+    width: var(--bar-width);
+    color: $primaryColor;
+    position: relative;
+    border: none;
+    margin-right: auto;
+}
+.rate:before {
+    position: absolute;
+    content: "";
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    margin-top: -15px;
+    transition: .4s;
+    animation: 2s circleGrow linear forwards;
+}
+.rate:after {
+    content: '';
+    height: 8px;
+    width: 0%;
+    position: absolute;
+    left: 0.4em;
+    bottom: 0.25em;
+    background: $primaryColor;
+    border-radius: 5px;
+    animation: 2s lineGrow linear forwards;
+    
+}
+
+
+@keyframes circleGrow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(var(--bar-width)); }
+}
+@keyframes lineGrow {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+@keyframes flash {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.right .tech-skills div >span{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+}
+
+.right .tech-skills .rating {
+    font-size: 14px;
+    align-self: end;
+    opacity: 0;
+    animation: 1s 2s flash linear forwards;
+    background-color: $primaryColor;
+    color: $seconderyColor;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px 1px $primaryColor;
+}
+
+
+
+
+
+
+
+
+/*content animation*/
+@keyframes slideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/*===================Footer===================*/
+footer {
+  grid-column: span 12;
+  grid-row: 3;
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+footer .social a{
+  margin-right: 20px;
+  transition: transform 4s;
+}
+
+footer .social i:hover{
+  transform: scale(1.7,1.7);
+  border-radius: 50%;
+  background-color: $primaryColor;
+  box-shadow: 0px 0px 20px 2px $primaryColor;
+}
+
+footer .copyright {
+  color: rgb(211, 211, 211);
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center; /* Center content for mobile */
+  }
+  
+  .navbar-toggler {
+    position: absolute;
+    right: 10px; /* Adjust position */
+    top: 20px;
+  }
+
+  .navbar-toggler-icon {
+    background-color: $primaryColor;
+  }
+
+  .navbar-collapse {
+    background-color: white; /* Dropdown menu background */
+    text-align: center;
+    z-index: 1;
+  }
+
+  .nav-link {
+    color: $mainColor !important; /* Update link color for dropdown */
+    display: block; /* Stack links vertically */
+    margin: 10px 0;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px;
+  }
+
+  section .left,
+  .right .tech-skills {
+    width: 100%;
+  }
+
+  .left .txt div {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .left .txt p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .left .soft-skills {
+    justify-content: center;
+  }
+
+  .right .tech-skills div {
+    padding: 10px 20px;
+  }
+
+  nav img {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav p {
+    font-size: 18px;
+  }
+
+  .container-fluid {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  section .left .txt div {
+    font-size: 24px;
+  }
+
+  .right .tech-skills div {
+    font-size: 12px;
+  }
+
+  .left .soft-skills div {
+    width: 140px;
+    height: 40px;
+  }
+}
+
