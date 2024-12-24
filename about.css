@@ -89,6 +89,7 @@ section {
   animation: slideUp 2.5s ease-out forwards;
 }
 
+/*===================left side=================*/
 section .left {
   width: 580px;
   height: 530px;
@@ -141,6 +142,7 @@ section .left {
   box-shadow: 0px 0px 10px White;
 }
 
+/*===================Right side=================*/
 .right > p {
   color: #DA3082;
   font-size: 24px;
@@ -194,6 +196,7 @@ section .left {
   margin-right: auto;
 }
 
+/*circle*/
 .rate:before {
   position: absolute;
   content: "";
@@ -206,6 +209,7 @@ section .left {
   animation: 2s circleGrow linear forwards;
 }
 
+/*line*/
 .rate:after {
   content: "";
   height: 8px;
@@ -216,6 +220,26 @@ section .left {
   background: #DA3082;
   border-radius: 5px;
   animation: 2s lineGrow linear forwards;
+}
+
+.right .tech-skills div > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right .tech-skills .rating {
+  font-size: 14px;
+  align-self: end;
+  opacity: 0;
+  animation: 1s 2s flash linear forwards;
+  background-color: #DA3082;
+  color: White;
+  width: 40px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+  box-shadow: 0px 0px 10px 1px #DA3082;
 }
 
 @keyframes circleGrow {
@@ -242,26 +266,6 @@ section .left {
     opacity: 1;
   }
 }
-.right .tech-skills div > span {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.right .tech-skills .rating {
-  font-size: 14px;
-  align-self: end;
-  opacity: 0;
-  animation: 1s 2s flash linear forwards;
-  background-color: #DA3082;
-  color: White;
-  width: 40px;
-  text-align: center;
-  border-radius: 5px;
-  margin-left: 10px;
-  box-shadow: 0px 0px 10px 1px #DA3082;
-}
-
 /*content animation*/
 @keyframes slideUp {
   0% {
@@ -302,6 +306,7 @@ footer .copyright {
   color: rgb(211, 211, 211);
 }
 
+/*====================media ========================*/
 @media (max-width: 768px) {
   .navbar {
     text-align: center; /* Center content for mobile */

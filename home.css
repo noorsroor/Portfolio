@@ -21,7 +21,7 @@ body {
   color: White;
 }
 
-/*===================Nav Bar===================*/
+/*=============================Nav Bar============================*/
 nav {
   grid-column: span 12;
   grid-row: 1;
@@ -75,7 +75,7 @@ nav p {
   margin-right: 110px;
 }
 
-/*===================Main section===================*/
+/*===============================Main section===========================*/
 .main-content {
   display: flex;
   flex-direction: column;
@@ -107,6 +107,7 @@ nav p {
     transform: translateY(0);
   }
 }
+/*=================Hero ==================*/
 section:nth-child(1) .txt {
   width: 728px;
   height: 382px;
@@ -136,6 +137,7 @@ section:nth-child(1) .txt div:nth-child(4) {
   margin-top: 80px;
 }
 
+/*===buttons===*/
 section:nth-child(1) .btns button {
   height: 50px;
   width: 160px;
@@ -162,6 +164,7 @@ section:nth-child(1) .btns button:nth-child(2) {
   background-color: #10050B;
 }
 
+/*===logi img===*/
 section:nth-child(1) .logo-img img {
   width: 390px;
   height: 490px;
@@ -169,7 +172,7 @@ section:nth-child(1) .logo-img img {
   animation: 4s flow ease-in-out infinite;
 }
 
-/*=====projects======*/
+/*=====================projects================*/
 section:nth-child(2) {
   grid-column: span 12;
   display: flex;
@@ -270,7 +273,7 @@ section:nth-child(2) .text-overlay p {
     transform: translateY(0);
   }
 }
-/*===================Footer===================*/
+/*==================================Footer===========================*/
 footer {
   grid-column: span 12;
   grid-row: 3;
