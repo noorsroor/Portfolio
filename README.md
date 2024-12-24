@@ -17,5 +17,8 @@ Welcome to my portfolio repository! This project showcases my skills, projects, 
 - **CSS3**: For styling, animations, and layout.
 
 ### UI/UX Desgin using figma
-[Wireframe & Mouckup Design](https://www.figma.com/design/QqtECUQdVTrKhmQh5GWgut/Portfolio-Design?node-id=0-1&t=mIP29msyESgZTq1O-1)
+[**Wireframe & Mouckup Design**](https://www.figma.com/design/QqtECUQdVTrKhmQh5GWgut/Portfolio-Design?node-id=0-1&t=mIP29msyESgZTq1O-1)
+
+### View the portfolio live Url
+[**Live URL**](https://noorsroor.github.io/Portfolio/)
 
