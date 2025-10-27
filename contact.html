@@ -49,18 +49,20 @@
     <div class="contact-container">
         <p>Contact Me!</p>
         <p>I’d Love to Hear from You!</p>
-        <form>
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" placeholder="Enter Your Name|">
+      <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="fc1cf59e-1c64-4591-a4f4-bd8230a9f72a">
+    <label for="full-name">Full Name</label>
+    <input type="text" id="full-name" name="name" required placeholder="Enter Your Name">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter Your Email|">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="Enter Your Email">
 
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Enter Your Message|"></textarea>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Enter Your Message"></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+    <button type="submit">Send Message</button>
+</form>
+
     </div>
   </section><!--===========End main==========-->
 

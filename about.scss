@@ -176,9 +176,10 @@ section .left {
 /*slider*/
 .right div:nth-of-type(1) .rate{--bar-width:380px}
 .right div:nth-of-type(2) .rate{--bar-width:235px}
-.right div:nth-of-type(3) .rate{--bar-width:325px}
-.right div:nth-of-type(4) .rate{--bar-width:180px}
-.right div:nth-of-type(5) .rate{--bar-width:260px}
+.right div:nth-of-type(3) .rate{--bar-width:320px}
+.right div:nth-of-type(4) .rate{--bar-width:380px}
+.right div:nth-of-type(5) .rate{--bar-width:320px}
+.right div:nth-of-type(6) .rate{--bar-width:380px}
 
 .rate {
     width: var(--bar-width);
